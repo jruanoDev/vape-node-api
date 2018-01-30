@@ -1,0 +1,21 @@
+{
+  "name": "vapeplanner_backend",
+  "version": "0.0.1",
+  "description": "A REST API for use on VapePlanner Android application, it uses Express to manage REST routes and MongoDB to storage all the user's information.",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://jruanogalvez@gitlab.iesvirgendelcarmen.com/jruanogalvez/VapePlanner_backend.git"
+  },
+  "author": "Óscar Caparrós Tortosa & Jose María Ruano Gálvez",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.18.2",
+    "express": "^4.16.2",
+    "mongoose": "^5.0.2"
+  }
+}
