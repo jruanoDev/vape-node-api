@@ -2,7 +2,7 @@ var mongoose = require('mongoose');
 var Schema = mongoose.Schema;
 
 var baseSchema = ({
-    _id        : Number,
+    _id        : {type: Number, unique: true},
     marca      : String,
     cantidad   : Number,
     proporcion : String,

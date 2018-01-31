@@ -15,5 +15,5 @@ var liquidSchema = new Schema({
     descripcion    : String
 });
 
-var Liquid = mongoose.model('Liquid', liquidSchema);
-module.exports = Liquid;
+var Liquids = mongoose.model('Liquid', liquidSchema);
+module.exports = Liquids;
