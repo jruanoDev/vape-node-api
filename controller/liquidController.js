@@ -18,7 +18,7 @@ exports.createLiquid = function(req, res) {
 };
 
 exports.updateLiquid = function(req, res) {
-    Liquids.update({id: req.params.id}, req.body, {upsert: true, new: true}, function(err, data) {
+    Liquids.update({_id: req.params.id}, req.body, {upsert: true, new: true}, function(err, data) {
         if(err) throw err;
         res.status(301).json("Usuario/s borrado/s correctamente. ID: " + req.params.id);
     });
