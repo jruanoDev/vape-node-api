@@ -2,7 +2,8 @@ var mongoose = require('mongoose');
 var Schema = mongoose.Schema;
 
 var flavourSchema = ({
-    _id         : {type: Number, unique: true},
+    _id         : Number,
+    user_id     : Number,
     nombre      : String,
     marca       : String,
     descripcion : String,

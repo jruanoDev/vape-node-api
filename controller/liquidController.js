@@ -4,6 +4,7 @@ var Liquids  = mongoose.model('Liquid');
 exports.listAllLiquids = function(req, res) {
     Liquids.find({}, function(err, data) {
         if(err) throw err;
+        console.log(req.body);
         res.json(data);
     });
 };
@@ -20,7 +21,7 @@ exports.createLiquid = function(req, res) {
 exports.updateLiquid = function(req, res) {
     Liquids.update({_id: req.params.id}, req.body, {upsert: true, new: true}, function(err, data) {
         if(err) throw err;
-        res.status(301).json("Usuario/s borrado/s correctamente. ID: " + req.params.id);
+        res.status(301).json("Liquido actualizado correctamente. ID: " + req.params.id);
     });
 }
 

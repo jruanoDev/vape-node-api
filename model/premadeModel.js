@@ -2,7 +2,8 @@ var mongoose = require('mongoose');
 var Schema = mongoose.Schema;
 
 var premadeSchema = ({
-    _id      : {type: Number, unique: true},
+    _id      : Number,
+    user_id  : Number,
     marca    : String,
     cantidad : Number,
     nicotina : Number,

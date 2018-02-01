@@ -3,6 +3,7 @@ var Schema   = mongoose.Schema;
 
 var liquidSchema = new Schema({
     _id            : Number,
+    user_id        : Number,
     base           : Number,
     aroma          : Number,
     maceracion     : Number,
