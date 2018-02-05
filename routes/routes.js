@@ -38,4 +38,12 @@ module.exports = function(app) {
     app.route('/premades/:id')
         .put(premades.updatePremade)
         .delete(premades.deletePremade);
+    
+    var users = require('../controller/userController');
+    
+    app.route('/users/signup')
+        .post(users.createUser);
+    
+    app.route('/users/:id')
+        .delete(users.deleteUser);
 }   

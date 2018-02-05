@@ -6,6 +6,7 @@ var express    = require('express'),
     Flavour    = require('./model/flavourModel'),
     Base       = require('./model/baseModel'),
     Premade    = require('./model/premadeModel'),
+    User       = require('./model/userModel'),
     bodyParser = require('body-parser');
 
 mongoose.promise = global.Promise;
