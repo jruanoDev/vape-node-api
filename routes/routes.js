@@ -9,6 +9,9 @@ module.exports = function(app) {
         .delete(liquids.deleteLiquid)
         .put(liquids.updateLiquid);
     
+    app.route('/liquids/:state')
+        .get(liquids.listLiquidsByState);
+    
     var flavours = require('../controller/flavourController');
     
     app.route('/flavours/')

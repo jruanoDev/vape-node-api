@@ -5,15 +5,15 @@ var liquidSchema = new Schema({
     _id            : Number,
     user_id        : String,
     base           : Number,
-    aroma          : Number,
-    maceracion     : Number,
-    estado         : Boolean,
-    nicotina       : Number,
-    nombre         : String,
-    fecha_creacion : {type: Date, default: Date.now()},
-    cantidad       : Number,
-    favorito       : Boolean,
-    descripcion    : String
+    flavour        : Number,
+    maceration     : Number,
+    state          : Boolean,
+    niconin        : Number,
+    name           : String,
+    creation_date  : {type: Date, default: Date.now()},
+    quantity       : Number,
+    favourite      : Boolean,
+    description    : String
 });
 
 var Liquids = mongoose.model('Liquid', liquidSchema);

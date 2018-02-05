@@ -4,9 +4,9 @@ var Schema = mongoose.Schema;
 var premadeSchema = ({
     _id      : Number,
     user_id  : String,
-    marca    : String,
-    cantidad : Number,
-    nicotina : Number,
+    brand    : String,
+    quantity : Number,
+    nicotin  : Number,
     base     : Number
 });
 

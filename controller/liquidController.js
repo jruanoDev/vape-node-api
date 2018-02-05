@@ -8,12 +8,19 @@ exports.listAllLiquids = function(req, res) {
     });
 };
 
+exports.listLiquidsByState = function(req, res) {
+    Liquids.find({state: req.params.state, user_id: req.headers.user_id}, function(err, data) {
+        if(err) throw err;
+        res.json(data);
+    });
+}
+
 exports.createLiquid = function(req, res) {
     var liquid = new Liquids(req.body);
     liquid.save(function(err, data) {
         if(err) res.send(err);
         
-        res.status(301).json("Liquido añadido correctamente. " + liquid);
+        res.status(301).json("Liquid added successfully " + liquid);
     });
 };
 
@@ -21,7 +28,7 @@ exports.updateLiquid = function(req, res) {
     Liquids.update({_id: req.params.id, user_id: req.headers.user_id},
                    req.body, {upsert: true, new: true}, function(err, data) {
         if(err) throw err;
-        res.status(301).json("Liquido actualizado correctamente. ID: " + req.params.id);
+        res.status(301).json("Liquid updated successfully ID: " + req.params.id);
     });
 }
 
@@ -29,6 +36,6 @@ exports.deleteLiquid = function(req, res) {
     Liquids.remove({_id: req.params.id, user_id: req.headers.user_id}, function(err, data) {
         if(err) throw err;
         
-        res.status(301).json("Liquido borrado correctamente. ID: " + req.params.id);
+        res.status(301).json("Liquid deleted successfully. ID: " + req.params.id);
     });
 };
