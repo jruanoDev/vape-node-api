@@ -3,11 +3,11 @@ var Schema = mongoose.Schema;
 
 var flavourSchema = ({
     _id         : Number,
-    user_id     : Number,
+    user_id     : String,
     nombre      : String,
     marca       : String,
     descripcion : String,
-    estado      : String, 
+    estado      : Boolean, 
     cantidad    : Number
 });
 

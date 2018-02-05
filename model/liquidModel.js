@@ -3,14 +3,14 @@ var Schema   = mongoose.Schema;
 
 var liquidSchema = new Schema({
     _id            : Number,
-    user_id        : Number,
+    user_id        : String,
     base           : Number,
     aroma          : Number,
     maceracion     : Number,
-    estado         : String,
+    estado         : Boolean,
     nicotina       : Number,
     nombre         : String,
-    fecha_creacion : Date,
+    fecha_creacion : {type: Date, default: Date.now()},
     cantidad       : Number,
     favorito       : Boolean,
     descripcion    : String

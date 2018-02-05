@@ -41,9 +41,12 @@ module.exports = function(app) {
     
     var users = require('../controller/userController');
     
-    app.route('/users/signup')
+    app.route('/signup')
         .post(users.createUser);
     
     app.route('/users/:id')
         .delete(users.deleteUser);
+    
+    app.route('/login')
+        .post(users.authenticateUser);
 }   

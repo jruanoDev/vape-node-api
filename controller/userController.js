@@ -1,6 +1,7 @@
 var mongoose = require('mongoose');
 var Users  = mongoose.model('User');
 var bcrypt = require('bcrypt');
+var jwt = require('jsonwebtoken');
 
 exports.createUser = function(req, res) {
     Users.find({email: req.body.email}).exec().then(function(user) {
@@ -24,7 +25,8 @@ exports.createUser = function(req, res) {
 
                     user.save().then(function(result) {
                         res.status(201).json({
-                            message: 'User created'
+                            message: 'User created',
+                            user_id: user._id
                         });
                     }).catch()
                 }
@@ -32,6 +34,41 @@ exports.createUser = function(req, res) {
         }
     }).catch();  
 };
+
+exports.authenticateUser = function(req, res) {
+    Users.find({email: req.body.email}).exec().then(function(user) {
+        if(user.length < 1) {
+            return res.status(401).json({
+                message: 'Auth failed.' 
+            });
+        }
+        
+        bcrypt.compare(req.body.password, user[0].password, function(err, result) {
+            if(err) {
+                return res.status(401).json({
+                    message: 'Auth failed'
+                });
+            }
+            
+            if(result) {
+                var token = jwt.sign({email: user[0].email, userId: user[0]._id},
+                    process.env.JWT_PRIVATE_KEY, {
+                        expiresIn: "1h"
+                    });
+                
+                return res.status(200).json({
+                    message: 'Auth successful',
+                    token: token
+                });
+            }
+            
+            res.status(401).json({
+                message: 'Auth failed.'
+            });
+        }); 
+        
+    }).catch();
+}
 
 exports.deleteUser = function(req, res) {
     Users.remove({_id: req.params.id}).exec().then(function(result) {

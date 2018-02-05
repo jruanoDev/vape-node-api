@@ -3,7 +3,7 @@ var Schema = mongoose.Schema;
 
 var premadeSchema = ({
     _id      : Number,
-    user_id  : Number,
+    user_id  : String,
     marca    : String,
     cantidad : Number,
     nicotina : Number,
