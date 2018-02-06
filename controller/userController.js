@@ -57,8 +57,7 @@ exports.authenticateUser = function(req, res) {
                     });
                 
                 return res.status(200).json({
-                    message: 'Auth successful',
-                    token: token
+                    user_id: user[0]._id
                 });
             }
             
