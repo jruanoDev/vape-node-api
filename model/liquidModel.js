@@ -8,7 +8,7 @@ var liquidSchema = new Schema({
     flavour        : Number,
     maceration     : Number,
     state          : Boolean,
-    niconin        : Number,
+    nicotine       : Number,
     name           : String,
     creation_date  : {type: Date, default: Date.now()},
     quantity       : Number,
