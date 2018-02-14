@@ -1,0 +1,60 @@
+[33m[nodemon] 1.14.12[39m
+[33m[nodemon] to restart at any time, enter `rs`[39m
+[33m[nodemon] watching: *.*[39m
+[32m[nodemon] starting `node server.js`[39m
+events.js:141
+      throw er; // Unhandled 'error' event
+      ^
+
+Error: EBADF: bad file descriptor, read
+    at Error (native)
+Server listening on port 8080
+events.js:141
+      throw er; // Unhandled 'error' event
+      ^
+
+Error: listen EADDRINUSE :::8080
+    at Object.exports._errnoException (util.js:870:11)
+    at exports._exceptionWithHostPort (util.js:893:20)
+    at Server._listen2 (net.js:1237:14)
+    at listen (net.js:1273:10)
+    at Server.listen (net.js:1369:5)
+    at EventEmitter.listen (/home/ubuntu/proyectos/VapePlanner_backend/node_modules/express/lib/application.js:618:24)
+    at Object.<anonymous> (/home/ubuntu/proyectos/VapePlanner_backend/server.js:21:5)
+    at Module._compile (module.js:410:26)
+    at Object.Module._extensions..js (module.js:417:10)
+    at Module.load (module.js:344:32)
+    at Function.Module._load (module.js:301:12)
+    at Function.Module.runMain (module.js:442:10)
+    at startup (node.js:136:18)
+    at node.js:966:3
+[33m[nodemon] 1.14.12[39m
+[33m[nodemon] to restart at any time, enter `rs`[39m
+[33m[nodemon] watching: *.*[39m
+[32m[nodemon] starting `node server.js`[39m
+events.js:141
+      throw er; // Unhandled 'error' event
+      ^
+
+Error: EBADF: bad file descriptor, read
+    at Error (native)
+Server listening on port 8080
+events.js:141
+      throw er; // Unhandled 'error' event
+      ^
+
+Error: listen EADDRINUSE :::8080
+    at Object.exports._errnoException (util.js:870:11)
+    at exports._exceptionWithHostPort (util.js:893:20)
+    at Server._listen2 (net.js:1237:14)
+    at listen (net.js:1273:10)
+    at Server.listen (net.js:1369:5)
+    at EventEmitter.listen (/home/ubuntu/proyectos/VapePlanner_backend/node_modules/express/lib/application.js:618:24)
+    at Object.<anonymous> (/home/ubuntu/proyectos/VapePlanner_backend/server.js:21:5)
+    at Module._compile (module.js:410:26)
+    at Object.Module._extensions..js (module.js:417:10)
+    at Module.load (module.js:344:32)
+    at Function.Module._load (module.js:301:12)
+    at Function.Module.runMain (module.js:442:10)
+    at startup (node.js:136:18)
+    at node.js:966:3
