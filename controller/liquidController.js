@@ -30,7 +30,9 @@ exports.updateLiquid = function(req, res) {
     Liquids.update({_id: req.params.id, user_id: req.headers.user_id},
                    req.body, {upsert: true, new: true}, function(err, data) {
         if(err) throw err;
-        res.status(200).json("Liquid updated successfully ID: " + req.params.id);
+        res.status(200).json({
+            "message": "Liquid updated successfully"
+        });
     });
 }
 
@@ -38,6 +40,8 @@ exports.deleteLiquid = function(req, res) {
     Liquids.remove({_id: req.params.id, user_id: req.headers.user_id}, function(err, data) {
         if(err) throw err;
         
-        res.status(200).json("Liquid deleted successfully. ID: " + req.params.id);
+        res.status(200).json({
+            "message": "Liquid deleted successfully"
+        });
     });
 };
