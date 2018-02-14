@@ -13,7 +13,8 @@ var liquidSchema = new Schema({
     creation_date  : {type: Date, default: Date.now()},
     quantity       : Number,
     favourite      : Boolean,
-    description    : String
+    description    : String,
+    flavourProp    : Number
 });
 
 var Liquids = mongoose.model('Liquid', liquidSchema);
