@@ -40,6 +40,15 @@ Y ejecutamos el archivo del servidor
 
 `nodemon server.js` / `node server.js` / `npm start`
 
+## Rutas REST
+
+| Método | Ruta | Descripción |
+| --- | --- |
+| GET | /liquids | Lista todos los líquidos | 
+| POST | /liquids | Crea un nuevo líquido |
+| DELETE | /liquids/:id | Borra un líquido dependiendo del ID |
+| PUT | /liquids/:id | Actualiza un líquido con los datos del Body |
+
 ## Créditos
 
 Creado por Jose María Ruano Gálvez y Óscar Caparrós Tortosa para las asignaturas de:
