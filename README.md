@@ -43,7 +43,7 @@ Y ejecutamos el archivo del servidor
 ## Rutas REST
 
 | Método | Ruta | Descripción |
-| --- | --- |
+| --- | --- | -- |
 | GET | /liquids | Lista todos los líquidos | 
 | POST | /liquids | Crea un nuevo líquido |
 | DELETE | /liquids/:id | Borra un líquido dependiendo del ID |
