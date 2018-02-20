@@ -44,10 +44,14 @@ Y ejecutamos el archivo del servidor
 
 | Método | Ruta | Descripción |
 | --- | --- | -- |
-| GET | /liquids | Lista todos los líquidos | 
-| POST | /liquids | Crea un nuevo líquido |
-| DELETE | /liquids/:id | Borra un líquido dependiendo del ID |
-| PUT | /liquids/:id | Actualiza un líquido con los datos del Body |
+| **GET** | /liquids | Lista todos los líquidos | 
+| **POST** | /liquids | Crea un nuevo líquido |
+| **DELETE** | /liquids/:id | Borra un líquido dependiendo del ID |
+| **PUT** | /liquids/:id | Actualiza un líquido con los datos del Body |
+| **POST** | /signup | Registra un nuevo usuario |
+| **POST** | /login | Autentifica un usuario
+
+> **NOTA:** Las rutas son las mismas para Liquids, Flavours, Bases y Premades, y todas dependen del usuario.
 
 ## Créditos
 
