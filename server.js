@@ -1,6 +1,6 @@
 var express    = require('express'),
     app        = express(),
-    port       = process.env.PORT || 8080,
+    port       = process.env.PORT || 5000,
     mongoose   = require('mongoose'),
     Liquid     = require('./model/liquidModel'),
     Flavour    = require('./model/flavourModel'),
