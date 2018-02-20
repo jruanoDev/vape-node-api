@@ -52,7 +52,7 @@ exports.authenticateUser = function(req, res) {
             
             if(result) {
                 var token = jwt.sign({email: user[0].email, userId: user[0]._id},
-                    process.env.JWT_PRIVATE_KEY, {
+                    "5fZGgkDaeG", {
                         expiresIn: "1h"
                     });
                 
