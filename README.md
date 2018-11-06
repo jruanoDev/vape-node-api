@@ -1,5 +1,7 @@
 # Backend VapePlanner
 
+> **NOTA:** Esta API debería ir acompañada de una aplicación Android Nativa, este proyecto es simplemente para demostración, no se trabajará en su mantenimiento
+
 Un back-end realizado sobre la arquitectura REST al que se conecta desde un cliente Android. Este back-end es capaz de crear, actualizar, borrar y listar Líquidos, Aromas, Bases y líquidos prefabricados en una base de datos MongoDB.
 
 Tiene capacidad de autentificación usando tokens y clasifica la información por usuarios haciendo que los datos se mantengan desde cualquier cliente desde el que se conecte el usuario.
@@ -51,11 +53,4 @@ Y ejecutamos el archivo del servidor
 | **POST** | /signup | Registra un nuevo usuario |
 | **POST** | /login | Autentifica un usuario
 
-> **NOTA:** Las rutas son las mismas para Liquids, Flavours, Bases y Premades, y todas dependen del usuario.
-
-## Créditos
-
-Creado por Jose María Ruano Gálvez y Óscar Caparrós Tortosa para las asignaturas de:
-
-- Desarrollo de Interfaces
-- Programación de Servicios y Procesos
+> **NOTA:** Las rutas tendrían el mismo formato para Liquids, Flavours, Bases y Premades, y todas dependen del usuario.
